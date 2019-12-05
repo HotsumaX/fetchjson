@@ -10,11 +10,12 @@ interface Todo {
 }
 axios.get(url).then(response=>{
   const todo = response.data as Todo
-  
+
   const id = todo.id
   const title = todo.title
   const completed = todo.completed
 
+  // the below execution of the logTodo list must be in the order that it will be used in
   logTodo(id, title, completed)
 })
 
